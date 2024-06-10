@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+<h1>{% block title %} Scootcher {% endblock %}</h1>
+    <br>
+    <div id="welcome">
+    <h2> Welcome, {{ user['username'] }}</h2>
+    </div>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Tokens</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>{{ points['tokens']}} </td>
+            <td>{{ points['points']}}</td>
+        </tr>
+        <tr>
+            <td><form action="/play"><button type="submit" id="player" value="{{ user['username']}}"> Play! </button></form>
+            <td> <button type="button"> redeem </button></td>
+        </tr>
+    </table>
+
+    Live Video
+
+
+{% endblock %}
